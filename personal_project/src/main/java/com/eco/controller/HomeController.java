@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Handles requests for the application home page.
  */
 @Controller
+@RequestMapping(value = "home")
 public class HomeController {
 	
 	@Inject
@@ -67,5 +68,17 @@ public class HomeController {
 	public String login(Locale locale, Model model) {
 		
 		return "login";
+	}
+
+	
+	@RequestMapping(value = "/contact", method = RequestMethod.GET)
+	public String contact(Locale locale, Model model) {
+		
+		return "contact";
+	}
+	@RequestMapping(value = "/contactBoard", method = RequestMethod.GET)
+	public String contactBoard(Locale locale, Model model) {
+		
+		return "contactBoard";
 	}
 }

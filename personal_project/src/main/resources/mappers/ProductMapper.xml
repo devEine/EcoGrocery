@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- DAO Impl의 namespace와 통일해야 데이터 mapper문 읽을 수 있음 -->
+<mapper namespace="com.eco.mapper.ProductMapper">
+
+	<!-- 카테고리: 식료품만 출력(상품 타입 구분X) -->
+	<select id="getGroceryList" resultType="ProductVO">
+		select *
+		from product
+		where category = 'grocery'
+		order by prod_date desc
+	</select>
+</mapper>

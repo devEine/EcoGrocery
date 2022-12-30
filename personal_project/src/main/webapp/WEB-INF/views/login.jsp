@@ -164,13 +164,14 @@ body {
 }
 
 .btn {
-  background-color: var(--blue);
-  background-image: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 74%);
+  /* background-color: var(--blue);
+  background-image: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 74%); */
+  background-color: #FFE15D;
   border-radius: 20px;
-  border: 1px solid var(--blue);
-  color: var(--white);
+  border: 1px solid #FFE15D;
+  color: #434242;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   font-weight: bold;
   letter-spacing: 0.1rem;
   padding: 0.9rem 4rem;
@@ -232,22 +233,23 @@ body {
   <!-- Sign Up -->
   <div class="container__form container--signup">
     <form action="#" class="form" id="form1">
-      <h2 class="form__title">Sign Up</h2>
-      <input type="text" placeholder="User" class="input" />
-      <input type="email" placeholder="Email" class="input" />
+      <h2 class="form__title">Log In</h2>
+<!--       <input type="text" placeholder="User" class="input" />
+ -->      <input type="email" placeholder="Email" class="input" />
       <input type="password" placeholder="Password" class="input" />
-      <button class="btn">Sign Up</button>
+      <a href="#" class="link" style="font-size: 15px; color: gray; margin-bottom: 0px;">비밀번호를 잃어버리셨나요?</a>      
+      <button class="btn">로그인</button>
     </form>
   </div>
 
   <!-- Sign In -->
   <div class="container__form container--signin">
     <form action="#" class="form" id="form2">
-      <h2 class="form__title">Sign In</h2>
+      <h2 class="form__title">회원가입</h2>
       <input type="email" placeholder="Email" class="input" />
       <input type="password" placeholder="Password" class="input" />
       <a href="#" class="link">Forgot your password?</a>
-      <button class="btn">Sign In</button>
+      <button class="btn">회원가입</button>
     </form>
   </div>
 
@@ -255,10 +257,11 @@ body {
   <div class="container__overlay">
     <div class="overlay">
       <div class="overlay__panel overlay--left">
-        <button class="btn" id="signIn">Sign In</button>
+      <!-- 회원가입 화면 만들고 연결 -->
+        <button class="btn" id="signIn" onclick="location.href='/'">회원가입</button>
       </div>
       <div class="overlay__panel overlay--right">
-        <button class="btn" id="signUp">Sign Up</button>
+        <button class="btn" id="signUp">회원가입</button>
       </div>
     </div>
   </div>

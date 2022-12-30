@@ -16,9 +16,9 @@
                         <div class="container">
                             <div class="row justify-content-start">
                                 <div class="col-lg-8 text-start">
-                                    <p class="fs-4 text-white">Welcome to our dairy farm</p>
-                                    <h1 class="display-1 text-white mb-5 animated slideInRight">The Farm of Dairy products</h1>
-                                    <a href="" class="btn btn-secondary rounded-pill py-3 px-5 animated slideInRight">Explore More</a>
+                                    <p class="fs-4 text-white">Welcome to our eco-friendly shop</p>
+                                    <h1 class="display-1 text-white mb-5 animated slideInRight">친환경 식료품</h1>
+                                    <a href="" class="btn btn-secondary rounded-pill py-3 px-5 animated slideInRight">Go to shop</a>
                                 </div>
                             </div>
                         </div>
@@ -30,9 +30,9 @@
                         <div class="container">
                             <div class="row justify-content-end">
                                 <div class="col-lg-8 text-end">
-                                    <p class="fs-4 text-white">Welcome to our dairy farm</p>
-                                    <h1 class="display-1 text-white mb-5 animated slideInRight">Best Organic Dairy Products</h1>
-                                    <a href="" class="btn btn-secondary rounded-pill py-3 px-5 animated slideInLeft">Explore More</a>
+                                    <p class="fs-4 text-white">The environment is the future</p>
+                                    <h1 class="display-1 text-white mb-5 animated slideInRight">친환경 생활용품</h1>
+                                    <a href="" class="btn btn-secondary rounded-pill py-3 px-5 animated slideInLeft">Go to shop</a>
                                 </div>
                             </div>
                         </div>
@@ -270,8 +270,8 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="section-title bg-white text-center text-primary px-3">Our Services</p>
-                <h1 class="mb-5">Eco-Grocery's</h1>
+                <p class="section-title bg-white text-center text-primary px-3">Our Task</p>
+                <h1 class="mb-5">Eco-Grocery's Task</h1>
             </div>
             <div class="row gy-5 gx-4">
                 <div class="col-lg-4 col-md-6 pt-5 wow fadeInUp" data-wow-delay="0.1s">
