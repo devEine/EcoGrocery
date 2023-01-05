@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- DAO Impl의 namespace와 통일해야 데이터 mapper문 읽을 수 있음 -->
+<mapper namespace="com.eco.mapper.ContactMapper">
+	
+	<!-- 고객 소리함 게시글 작성(POST) -->
+	<insert id="writePost">
+		insert into contact (email,title,content,contact_date,contact_name,contact_num)
+		values (#{email}, #{title}, #{content}, #{contact_date}, #{contact_name},#{contact_num})
+	</insert>
+	
+	<!-- 고객 소리함 게시글 목록(GET)-->
+	<select id="boardList" resultType="ContactVO">
+		select *
+		from contact 
+		order by contact_date desc
+	</select>
+</mapper>

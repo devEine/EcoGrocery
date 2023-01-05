@@ -13,22 +13,21 @@
 	<br>
 
 	<table class="table table-hover table-striped text-center" style="border: 1px solid;">
-		<thead>
 			<tr>
 				<th>번호</th>
 				<th>제목</th>
 				<th>글쓴이</th>
-				<th>조회수</th>
+				<th>작성일자</th>
 			</tr>
-		</thead>
-		<tbody>
+		
+		<c:forEach var="contactList" items="${contactList }">
 			<tr>
-				<th>1</th>
-				<th>제목</th>
-				<th>글쓴이</th>
-				<th>조회수</th>
+				<th>${contactList.contact_num }</th>
+				<th>${contactList.title }</th>
+				<th>${contactList.contact_name }</th>
+				<th>${contactList.contact_date }</th>
 			</tr>
-		</tbody>
+		</c:forEach>
 	</table>
 </div>
 

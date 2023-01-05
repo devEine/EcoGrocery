@@ -16,29 +16,30 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h3 class="mb-4">문의사항이 있으신가요?</h3>
                     <p class="mb-4">문의하실 내용을 작성해주세요. 이전 문의내역의 확인을 원하시면 우측의 링크를 클릭하세요. <a href="/home/contactBoard">고객의 소리함</a></p>
-                    <form>
+                    <form action="/contact/writePost" method="post">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+									<input type="hidden" name="contact_date" value="${contact_date }">
+                                    <input type="text" class="form-control" id="contact_name" name="contact_name" placeholder="Your Name">
                                     <label for="name">이름</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">email</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                                    <label for="email">회원가입 email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control" id="title" name="title" placeholder="Subject">
                                     <label for="subject">제목</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 250px"></textarea>
+                                    <textarea class="form-control" placeholder="Leave a message here" id="content" name="content" style="height: 250px"></textarea>
                                     <label for="message">내용을 작성해주세요</label>
                                 </div>
                             </div>

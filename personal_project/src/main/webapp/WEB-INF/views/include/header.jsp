@@ -90,7 +90,7 @@
                         <a href="404.html" class="dropdown-item">404 Page</a> -->
                     </div>
                 </div>
-                <a href="/home/contact" class="nav-item nav-link">Contact</a>
+                <a href="/contact/writeGet" class="nav-item nav-link">Contact</a>
                 <a href="service.html" class="nav-item nav-link">My Page</a>
                 <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
             </div>

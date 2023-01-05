@@ -71,11 +71,6 @@ public class HomeController {
 	}
 
 	
-	@RequestMapping(value = "/contact", method = RequestMethod.GET)
-	public String contact(Locale locale, Model model) {
-		
-		return "contact";
-	}
 	@RequestMapping(value = "/contactBoard", method = RequestMethod.GET)
 	public String contactBoard(Locale locale, Model model) {
 		

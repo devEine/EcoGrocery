@@ -20,12 +20,12 @@
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav">
 						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="#">생활용품</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">비누바</a>
+							aria-current="page" href="/product/supply">생활용품</a></li>
+						<li class="nav-item"><a class="nav-link" href="/product/supplyType?category=supply&prod_type=soap">비누바</a>
 						</li>
-						<li class="nav-item"><a class="nav-link" href="#">에코백</a>
+						<li class="nav-item"><a class="nav-link" href="/product/supplyType?category=supply&prod_type=ecoBag">에코백</a>
 						</li>
-						<li class="nav-item"><a class="nav-link" href="#">기타</a>
+						<li class="nav-item"><a class="nav-link" href="/product/supplyType?category=supply&prod_type=etc">기타</a>
 						</li>
 					</ul>
 				</div>
@@ -36,20 +36,20 @@
 		<div class="row gx-4">
             
             <!-- 반복문 돌릴 상품 목록  -->
-            <c:forEach var="product" begin="1" end="8">
+            <c:forEach var="supplyList" items="${supplyList }">
                 <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="product-item">
                         <div class="position-relative">
-                            <img class="img-fluid" src="${pageContext.request.contextPath}/resources/img/product-1.jpg" alt="">
+                            <img class="img-fluid" src="${pageContext.request.contextPath}/resources/img/${supplyList.prod_img}" alt="">
                             <div class="product-overlay">
                                 <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-link"></i></a>
                                 <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-cart"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <a class="d-block h5" href="">Pure Milk</a>
-                            <span class="text-primary me-1">$19.00</span>
-                            <span class="text-decoration-line-through">$29.00</span>
+                            <a class="d-block h5" href="">${supplyList.prod_name }</a>
+                            <span class="text-primary me-1">${supplyList.price }</span>
+                            <span class="text-decoration-line-through">${supplyList.price+6000 }</span>
                         </div>
                     </div>
                 </div>

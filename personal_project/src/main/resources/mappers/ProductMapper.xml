@@ -12,4 +12,30 @@
 		where category = 'grocery'
 		order by prod_date desc
 	</select>
+	
+	<!-- 카테고리+타입: 식료품만 출력(상품 타입 구분O) -->
+	<select id="getGroceryListType" resultType="ProductVO">
+		select *
+		from product
+		where category = 'grocery'
+		and prod_type = #{prod_type}
+		order by prod_date desc
+	</select>
+	
+	<!-- 카테고리: 생활용품만 출력(상품 타입 구분X) -->
+	<select id="getSupplyList" resultType="ProductVO">
+		select *
+		from product
+		where category = 'supply'
+		order by prod_date desc
+	</select>
+	
+	<!-- 카테고리+타입: 생활용품만 출력(상품 타입 구분O) -->
+	<select id="getSupplyListType" resultType="ProductVO">
+		select *
+		from product
+		where category = 'supply'
+		and prod_type = #{prod_type}
+		order by prod_date desc
+	</select>
 </mapper>

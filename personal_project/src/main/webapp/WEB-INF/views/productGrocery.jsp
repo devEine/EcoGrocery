@@ -21,11 +21,11 @@
 					<ul class="navbar-nav">
 						<li class="nav-item"><a class="nav-link active"
 							aria-current="page">식료품</a></li>
-						<li class="nav-item"><a class="nav-link" href="/product/grocery?type=meat">육류</a>
+						<li class="nav-item"><a class="nav-link" href="/product/groceryType?category=grocery&prod_type=meat">육류</a>
 						</li>
-						<li class="nav-item"><a class="nav-link" href="#">유제품</a>
+						<li class="nav-item"><a class="nav-link" href="/product/groceryType?category=grocery&prod_type=dairy">유제품</a>
 						</li>
-						<li class="nav-item"><a class="nav-link" href="#">과채</a>
+						<li class="nav-item"><a class="nav-link" href="/product/groceryType?category=grocery&prod_type=vegetables">과채</a>
 						</li>
 					</ul>
 				</div>

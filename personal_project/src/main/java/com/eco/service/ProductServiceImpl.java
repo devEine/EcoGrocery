@@ -20,13 +20,45 @@ public class ProductServiceImpl implements ProductService{
 	@Inject
 	private ProductDAO dao;
 	
-@Override
-	public List<ProductVO> getGroceryList(ProductVO vo) throws Exception {
-		log.info("ProductServiceImpl: getGroceryList(ProductVO vo)호출");
+	//카테고리: 식료품만 출력(상품 타입 구분X)
+	@Override
+		public List<ProductVO> getGroceryList(ProductVO vo) throws Exception {
+			log.info("ProductServiceImpl: getGroceryList(ProductVO vo)호출");
+			
+			List<ProductVO> groceryList = dao.getGroceryList(vo);
+			
+			return groceryList;
+		}
+	
+	//카테고리+타입: 식료품만 출력(상품 타입 구분O)
+	@Override
+	public List<ProductVO> getGroceryListType(ProductVO vo) throws Exception {
+		log.info("ProductServiceImpl: getGroceryListType(ProductVO vo)호출");
 		
-		List<ProductVO> groceryList = dao.getGroceryList(vo);
+		List<ProductVO> groceryListType = dao.getGroceryListType(vo);
 		
-		return groceryList;
+		return groceryListType;
+	}
+	
+	//카테고리: 생활용품만 출력(상품 타입 구분X)
+	@Override
+	public List<ProductVO> getSupplyList(ProductVO vo) throws Exception {
+		log.info("ProductServiceImpl: getSupplyList(ProductVO vo)호출");
+		
+		List<ProductVO> supplyList = dao.getSupplyList(vo);
+		
+		return supplyList;
+	}
+	
+	//카테고리+타입: 생활용품만 출력(상품 타입 구분O)
+	@Override
+	public List<ProductVO> getSupplyListType(ProductVO vo) throws Exception {
+		log.info("ProductServiceImpl: getSupplyListType(ProductVO vo)호출");
+		
+		List<ProductVO> supplyListType = dao.getSupplyListType(vo);
+		
+		
+		return supplyListType;
 	}
 
 }

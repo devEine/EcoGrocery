@@ -9,9 +9,8 @@ public class ProductVO {
 	private int price;
 	private String detail;
 	private String category;
-	private String type;
 	private Timestamp prod_date;
-	
+	private String prod_type;
 	public int getProd_num() {
 		return prod_num;
 	}
@@ -48,28 +47,30 @@ public class ProductVO {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public String getType() {
-		return type;
-	}
-	public void setType(String type) {
-		this.type = type;
-	}
 	public Timestamp getProd_date() {
 		return prod_date;
 	}
 	public void setProd_date(Timestamp prod_date) {
 		this.prod_date = prod_date;
 	}
+	public String getProd_type() {
+		return prod_type;
+	}
+	public void setProd_type(String prod_type) {
+		this.prod_type = prod_type;
+	}
 	@Override
 	public String toString() {
 		return "ProductVO [prod_num=" + prod_num + ", prod_name=" + prod_name + ", prod_img=" + prod_img + ", price="
-				+ price + ", detail=" + detail + ", category=" + category + ", type=" + type + ", prod_date="
-				+ prod_date + ", getProd_num()=" + getProd_num() + ", getProd_name()=" + getProd_name()
+				+ price + ", detail=" + detail + ", category=" + category + ", prod_date=" + prod_date + ", prod_Type="
+				+ prod_type + ", getProd_num()=" + getProd_num() + ", getProd_name()=" + getProd_name()
 				+ ", getProd_img()=" + getProd_img() + ", getPrice()=" + getPrice() + ", getDetail()=" + getDetail()
-				+ ", getCategory()=" + getCategory() + ", getType()=" + getType() + ", getProd_date()=" + getProd_date()
-				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
-				+ "]";
+				+ ", getCategory()=" + getCategory() + ", getProd_date()=" + getProd_date() + ", getProd_Type()="
+				+ getProd_type() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
+				+ super.toString() + "]";
 	}
+	
+	
 	
 	
 }
