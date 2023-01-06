@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,9 +24,10 @@
 		<c:forEach var="contactList" items="${contactList }">
 			<tr>
 				<th>${contactList.contact_num }</th>
-				<th>${contactList.title }</th>
+				<th><a href="/contact/boardContent?contact_num=${contactList.contact_num }&contact_name=${contactList.contact_name }&email=${contactList.email }&title=${contactList.title}&content=${contactList.content}">${contactList.title }</a></th>
 				<th>${contactList.contact_name }</th>
-				<th>${contactList.contact_date }</th>
+				<%-- <th>${contactList.contact_date }</th> --%>
+				<th><fmt:formatDate pattern="yy-MM-dd" value="${contactList.contact_date }" /></th> 
 			</tr>
 		</c:forEach>
 	</table>
@@ -43,7 +45,7 @@
 	</div>
 	
 	<div style="width: 1435px;  margin-bottom: 100px;">
-	<a href="/home/contact" style="float: right; color:var(--dark); font-weight: 500; border: 1px solid; background:#FFE15D; border-color:#FFE15D; border-radius:10px; padding: 7px;">글쓰기</a>
+	<a href="/contact/writeGet" style="float: right; color:var(--dark); font-weight: 500; border: 1px solid; background:#FFE15D; border-color:#FFE15D; border-radius:10px; padding: 7px;">글쓰기</a>
 	</div>
 
 

@@ -5,6 +5,8 @@
 
 <head>
     <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 추가할부분 -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Milky - Dairy Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
@@ -79,7 +81,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="/home/" class="nav-item nav-link active">Home</a>
-                <a href="/home/about" class="nav-item nav-link">About</a>
+                <a href="/about" class="nav-item nav-link">About</a>
                 <div class="nav-item dropdown">
                     <a href="/product" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
                     <div class="dropdown-menu bg-light m-0">

@@ -40,7 +40,7 @@ public class ProductController {
 		//식료품을 카테고리로 분류하기 위해 category변수명으로 변수를 view로 넘김
 		model.addAttribute("category",vo.getCategory());
 		
-		//service 메서드로 출력되는 상품 리스트를 어트리뷰트에 담아서 view로 넘김
+		//service 메서드로 출력되는 상품 리스트를 어트리뷰트에 담아서 view로 넘김 
 		model.addAttribute("groceryList",groceryList);
 		log.info("groceryList= "+groceryList);
 		

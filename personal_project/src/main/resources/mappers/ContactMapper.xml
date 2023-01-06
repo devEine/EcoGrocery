@@ -17,4 +17,31 @@
 		from contact 
 		order by contact_date desc
 	</select>
+	
+	<!-- 고객의 소리함 게시글 상세보기(GET) -->
+	<select id="boardContent" resultType="ContactVO">
+		select * 
+		from contact 
+		where contact_num = #{contact_num}
+	</select>
+	
+	<!-- 고객의 소리함 게시글 수정(GET)  -->
+	<select id="boardUpdateGet" resultType="ContactVO">
+		select * 
+		from contact 
+		where contact_num = #{contact_num}
+	</select>
+	
+	<!-- 고객의 소리함 게시글 수정(POST)  -->
+	<update id="boardUpdatePost" parameterType="ContactVO">
+		update contact 
+		set contact_name =#{contact_name}, email=#{email}, title=#{title}, content=#{content} 
+		where contact_num =#{contact_num} 
+	</update>
+	<!-- 고객의 소리함 게시글 삭제(POST)  -->
+	<delete id="boardDelete">
+		delete 
+		from contact 
+		where contact_num =#{contact_num}
+	</delete>
 </mapper>

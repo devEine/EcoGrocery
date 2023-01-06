@@ -18,7 +18,7 @@
                                 <div class="col-lg-8 text-start">
                                     <p class="fs-4 text-white">Welcome to our eco-friendly shop</p>
                                     <h1 class="display-1 text-white mb-5 animated slideInRight">친환경 식료품</h1>
-                                    <a href="" class="btn btn-secondary rounded-pill py-3 px-5 animated slideInRight">Go to shop</a>
+                                    <a href="/product/grocery?category=grocery" class="btn btn-secondary rounded-pill py-3 px-5 animated slideInRight">Go to shop</a>
                                 </div>
                             </div>
                         </div>
@@ -32,7 +32,7 @@
                                 <div class="col-lg-8 text-end">
                                     <p class="fs-4 text-white">The environment is the future</p>
                                     <h1 class="display-1 text-white mb-5 animated slideInRight">친환경 생활용품</h1>
-                                    <a href="" class="btn btn-secondary rounded-pill py-3 px-5 animated slideInLeft">Go to shop</a>
+                                    <a href="/product/supply?category=supply" class="btn btn-secondary rounded-pill py-3 px-5 animated slideInLeft">Go to shop</a>
                                 </div>
                             </div>
                         </div>
@@ -193,7 +193,7 @@
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <p class="section-title bg-white text-center text-primary px-3">Our Products</p>
-                <h1 class="mb-5">인기상품</h1>
+                <h1 class="mb-5">오늘의 상품</h1>
             </div>
             <div class="row gx-4">
                 <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">

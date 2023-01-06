@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,8 +16,8 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h3 class="mb-4">문의사항이 있으신가요?</h3>
-                    <p class="mb-4">문의하실 내용을 작성해주세요. 이전 문의내역의 확인을 원하시면 우측의 링크를 클릭하세요. <a href="/home/contactBoard">고객의 소리함</a></p>
-                    <form action="/contact/writePost" method="post">
+                    <p class="mb-4">문의하실 내용을 작성해주세요. 이전 문의내역의 확인을 원하시면 우측의 링크를 클릭하세요. <a href="/contact/boardList">고객의 소리함</a></p>
+                    <form action="/contact/writePost" method="post" accept-charset="UTF-8">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
