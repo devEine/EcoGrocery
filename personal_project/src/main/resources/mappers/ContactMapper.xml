@@ -17,7 +17,8 @@
 		from contact 
 		order by contact_date desc
 	</select>
-	
+
+		
 	<!-- 고객의 소리함 게시글 상세보기(GET) -->
 	<select id="boardContent" resultType="ContactVO">
 		select * 
@@ -44,4 +45,28 @@
 		from contact 
 		where contact_num =#{contact_num}
 	</delete>
-</mapper>
+	
+	<!-- ==============페이징 관련===================== -->
+	<!-- 총 게시글 갯수 출력 -->
+	<select id="countBoard" resultType="int">
+		SELECT COUNT(*) FROM contact
+	</select>
+
+	<!-- 페이징 처리 후 게시글 조회 -->
+	<select id="selectBoard" resultType="ContactVO">
+		SELECT *
+		FROM (
+		SELECT ROWNUM RN, A.*
+		FROM (
+		SELECT *
+		FROM contact
+		ORDER BY SEQ DESC
+		) A
+		)
+		WHERE RN BETWEEN #{start} AND #{end}
+</select>
+	<!-- ==============페이징 관련===================== -->
+	
+	
+
+</mapper> 

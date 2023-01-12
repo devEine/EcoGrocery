@@ -3,6 +3,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+var msg = "${msg}";
+
+if(msg != ""){
+alert(msg);	
+}
+
+});
+
+
+function fn_search(){
+$("#listForm").submit();
+return false;
+}
+
+</script>
 
 <%@include file ="include/header.jsp" %>
 
@@ -12,6 +32,15 @@
 	<h1 class="text-center"><a>고객의 소리함</a></h1>
 	<br>
 	<br>
+	<!-- 검색창 -->
+	<form method="get"  id="listForm" action="/contact/boardList">
+	<div class="card-header py-3">
+		<input type="text" id="searchKeyword" name="searchKeyword" value="${searchKeyword}"
+			style="width: 300px; height: 40px;" placeholder="검색어를 입력하세요." /> <a
+			href="#" onclick="fn_search();" class="btn btn-primary">검색</a>
+	</div>
+	<!-- 검색창 -->
+	
 
 	<table class="table table-hover table-striped text-center" style="border: 1px solid;">
 			<tr>
@@ -31,6 +60,7 @@
 			</tr>
 		</c:forEach>
 	</table>
+	</form>
 </div>
 
 

@@ -4,6 +4,26 @@
 
 <!-- DAO Impl의 namespace와 통일해야 데이터 mapper문 읽을 수 있음 -->
 <mapper namespace="com.eco.mapper.UserMapper">
+
+	<!-- 회원가입 -->
+	<insert id="register">
+		insert into user
+		values(#{user_id},#{user_pw},#{user_name},#{user_phone},#{reg_date})
+	</insert>
+
+	<!-- 아이디 중복체크 -->
+	<select id="idCheck" resultType="int">
+		select count(*) from user
+		where
+		user_id =#{user_id}
+	</select>
+
+	<!-- 휴대번호 중복체크 -->
+	<select id="phoneCheck" resultType="int">
+		select count(*) from user
+		where user_phone =#{user_phone}
+	</select>
+
 	
 
 </mapper>

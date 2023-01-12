@@ -52,6 +52,7 @@
         <div class="row g-0 d-none d-lg-flex">
             <div class="col-lg-6 ps-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center text-light">
+                    <span><a href="/user/register">회원가입</a></span>&nbsp;&nbsp;
                     <span>로그인/로그아웃 세션정보</span>
                     <!-- <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>

@@ -20,6 +20,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.eco.domain.ContactVO;
+import com.eco.domain.PageVO;
+import com.eco.domain.Pagingnation;
 import com.eco.domain.UserVO;
 import com.eco.service.ContactService;
 
@@ -63,6 +65,7 @@ public class ContactController {
 		List<ContactVO> contactList =  service.contactBoardList(vo);
 		
 		model.addAttribute("contactList", contactList);
+
 		
 		return "contactBoard";
 	}
@@ -82,6 +85,31 @@ public class ContactController {
 		model.addAttribute("title",vo.getTitle());
 		model.addAttribute("content",vo.getContent());
 		
+		/*
+		 * //페이징[s] Pagination pagination = new Pagination();
+		 * pagination.setCurrentPageNo(searchVO.getPageIndex());
+		 * pagination.setRecordCountPerPage(searchVO.getPageUnit());
+		 * pagination.setPageSize(searchVO.getPageSize());
+		 * 
+		 * ContactVO.setFirstIndex(pagination.getFirstRecordIndex());
+		 * ContactVO.setRecordCountPerPage(pagination.getRecordCountPerPage());
+		 * 
+		 * List<ContactVO> boardList = boardService.getList(searchVO); int totCnt =
+		 * boardService.getListCnt(searchVO);
+		 * 
+		 * pagination.setTotalRecordCount(totCnt);
+		 * 
+		 * searchVO.setEndDate(pagination.getLastPageNoOnPageList());
+		 * searchVO.setStartDate(pagination.getFirstPageNoOnPageList());
+		 * searchVO.setPrev(pagination.getXprev());
+		 * searchVO.setNext(pagination.getXnext());
+		 * 
+		 * model.addAttribute("boardList",boardList);
+		 * model.addAttribute("totCnt",totCnt);
+		 * model.addAttribute("totalPageCnt",(int)Math.ceil(totCnt /
+		 * (double)searchVO.getPageUnit()));
+		 * model.addAttribute("pagination",pagination); //페이징[e]
+		 */		
 		return "contactBoardContent";
 	}
 	

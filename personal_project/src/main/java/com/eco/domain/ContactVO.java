@@ -5,7 +5,7 @@ import java.sql.Date;
 import org.springframework.format.annotation.DateTimeFormat;
 
 
-public class ContactVO {
+public class ContactVO extends PageVO{
 	private String email;
 	private String title;
 	private String content;
@@ -13,6 +13,15 @@ public class ContactVO {
 	private Date contact_date;
 	private String contact_name;
 	private Integer contact_num;
+	
+	private String searchKeyword;
+
+	public String getSearchKeyword() {
+		return searchKeyword;
+	}
+	public void setSearchKeyword(String searchKeyword) {
+		this.searchKeyword = searchKeyword;
+	}
 	
 	public String getEmail() {
 		return email;
